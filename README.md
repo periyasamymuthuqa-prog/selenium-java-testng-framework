@@ -44,6 +44,31 @@ Features:
 - Separation of test data and automation scripts
 - Easy maintenance of test scenarios
 
+## CI/CD Integration
+
+This framework is integrated with GitHub Actions.
+
+Pipeline execution:
+
+1. Checkout source code
+2. Setup Java environment
+3. Install Maven dependencies
+4. Execute Selenium automation tests
+5. Generate test reports
+6. Upload execution artifacts
+
+
+## Execution Commands
+
+Run Selenium tests:
+
+mvn clean test
+
+
+Run Cucumber tests:
+
+mvn test
+
 ## Author
 
 Periyasamy Muthu
