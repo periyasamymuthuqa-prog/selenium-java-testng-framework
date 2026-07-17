@@ -1,0 +1,53 @@
+name: Selenium Automation Tests
+
+
+on:
+
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+
+
+jobs:
+
+
+  selenium-test:
+
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+
+
+    - name: Run Selenium Tests
+      run: mvn clean test
+
+
+
+    - name: Upload Test Reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+
+        name: selenium-test-report
+
+        path: target/
