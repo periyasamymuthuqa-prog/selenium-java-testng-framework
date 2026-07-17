@@ -33,6 +33,17 @@ Demo application:
 
 https://www.saucedemo.com/
 
+## Data Driven Testing
+
+Framework supports external test data execution using Apache POI.
+
+Features:
+
+- Excel based test data management
+- Reusable Excel utility methods
+- Separation of test data and automation scripts
+- Easy maintenance of test scenarios
+
 ## Author
 
 Periyasamy Muthu
